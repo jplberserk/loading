@@ -1,0 +1,88 @@
+body {
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+  
+h2 {
+    color: darkblue;
+    font-family: "UnifrakturCook", cursive;
+    font-size: 4em;
+}
+
+main {
+    display: flex;
+    width: 150px;
+    justify-content: space-between;
+}
+
+.circulo {
+    position: relative;
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.a {
+    background-color: darkred;
+    animation-name: load-a;
+}
+
+.b {
+    background-color: darkorchid;
+    animation-name: load-b;
+}
+
+@keyframes load-a {
+    0%{
+       left: 0;
+    }
+    25%{
+        transform: scale(1.4);
+        left: 40px;
+        z-index: 1;
+    }
+    50%{
+        transform: scale(1);
+        left: 120px;
+    }
+    75%{
+        transform: scale(0.4);
+        left: 40px;
+        z-index: 0;
+    }
+    100%{
+        transform: scale(1);
+        left: 0px; 
+    }
+}
+
+@keyframes load-b {
+    0%{
+        right: 0;
+     }
+     25%{
+         transform: scale(0.4);
+         right: 40px;
+         z-index: 0;
+     }
+     50%{
+         transform: scale(1);
+         right: 120px;
+     }
+     75%{
+         transform: scale(1.4);
+         right: 40px;
+         z-index: 1;
+     }
+     100%{
+         transform: scale(1);
+         right: 0px; 
+     }
+}
